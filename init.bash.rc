@@ -1,0 +1,6 @@
+# initialize bashrc repo
+
+git clone https://github.com/JeremyEngram/bashrc.git
+
+# should be initialized in root bashrc for system wide aliases
+git clone https://github.com/JeremyEngram/aliasmaster.git
