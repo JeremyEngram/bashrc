@@ -88,9 +88,7 @@ fi
 #export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
 
 # some more ls aliases
-alias ll='ls -alF'
-alias la='ls -A'
-alias l='ls -CF'
+alias gumshoe='gorilla'
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
@@ -105,6 +103,13 @@ if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
 
+if [ -f ~/.bashrc_aliases ]; then
+    . ~/.bashrc_aliases
+fi
+if [ -f ~/.bashrc_functions ]; then
+    . ~/.bashrc_functions
+fi
+
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
 # sources /etc/bash.bashrc).
@@ -115,9 +120,9 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
-###################################################################
-alias phone=/run/user/1000/gvfs/mtp:host=%5Busb%3A001%2C005%5D/Internal*/DCIM/
-####################################################################
+######################################################################
+  # LOCAL SYSTEM ALIASES|LOCAL USER ALIASES|LOCAL FORENSICS ALIASES#
+######################################################################
 
 alias implement='sudo apt install -y'
 alias dropoff='sudo apt remove -y'
