@@ -1,0 +1,207 @@
+# Function to run Shodan with provided query
+function shodan() {
+    if [[ -z "$1" ]]; then
+        echo "Usage: shodan <query>"
+        return 1
+    fi
+
+    echo "Running Shodan with query: $1"
+    shodan search "$1"
+}
+
+# Function to run theHarvester with provided domain
+function theHarvester() {
+    if [[ -z "$1" ]]; then
+        echo "Usage: theHarvester <domain>"
+        return 1
+    fi
+
+    echo "Running theHarvester for domain: $1"
+    theHarvester -d "$1"
+}
+
+# Function to run Recon-ng with provided workspace and module
+function recon-ng() {
+    if [[ -z "$1" || -z "$2" ]]; then
+        echo "Usage: recon-ng <workspace> <module>"
+        return 1
+    fi
+
+    echo "Running Recon-ng with workspace: $1 and module: $2"
+    recon-ng -w "$1" -m "$2"
+}
+
+# Add more functions for other OSINT tools as needed...
+
+
+# Function to run bbot with provided options
+function bbot() {
+    # Replace "bbot" with the actual command and options for bbot
+    echo "Running bbot with options: $@"
+    bbot "$@"
+}
+
+# Function to run bitscout with provided options
+function bitscout() {
+    # Replace "bitscout" with the actual command and options for bitscout
+    echo "Running bitscout with options: $@"
+    bitscout "$@"
+}
+
+# Function to run Bloodhound-Osint-Tool with provided options
+function Bloodhound-Osint-Tool() {
+    # Replace "Bloodhound-Osint-Tool" with the actual command and options for Bloodhound-Osint-Tool
+    echo "Running Bloodhound-Osint-Tool with options: $@"
+    Bloodhound-Osint-Tool "$@"
+}
+
+# Function to run Chat-GPT-Enhance with provided options
+function Chat-GPT-Enhance() {
+    # Replace "Chat-GPT-Enhance" with the actual command and options for Chat-GPT-Enhance
+    echo "Running Chat-GPT-Enhance with options: $@"
+    Chat-GPT-Enhance "$@"
+}
+
+# Function to run contact-info with provided options
+function contact-info() {
+    # Replace "contact-info" with the actual command and options for contact-info
+    echo "Running contact-info with options: $@"
+    contact-info "$@"
+}
+
+# Function to run Creds with provided options
+function Creds() {
+    # Replace "Creds" with the actual command and options for Creds
+    echo "Running Creds with options: $@"
+    Creds "$@"
+}
+
+# Function to run DeepBlueCLI with provided options
+function DeepBlueCLI() {
+    # Replace "DeepBlueCLI" with the actual command and options for DeepBlueCLI
+    echo "Running DeepBlueCLI with options: $@"
+    DeepBlueCLI "$@"
+}
+
+# Function to run DeeperForensics-1.0 with provided options
+function DeeperForensics-1.0() {
+    # Replace "DeeperForensics-1.0" with the actual command and options for DeeperForensics-1.0
+    echo "Running DeeperForensics-1.0 with options: $@"
+    DeeperForensics-1.0 "$@"
+}
+
+# Function to run dfvfs with provided options
+function dfvfs() {
+    # Replace "dfvfs" with the actual command and options for dfvfs
+    echo "Running dfvfs with options: $@"
+    dfvfs "$@"
+}
+
+# Function to run DFW1N-OSINT with provided options
+function DFW1N-OSINT() {
+    # Replace "DFW1N-OSINT" with the actual command and options for DFW1N-OSINT
+    echo "Running DFW1N-OSINT with options: $@"
+    DFW1N-OSINT "$@"
+}
+
+# Function to run Digital-Forensics-Guide with provided options
+function Digital-Forensics-Guide() {
+    # Replace "Digital-Forensics-Guide" with the actual command and options for Digital-Forensics-Guide
+    echo "Running Digital-Forensics-Guide with options: $@"
+    Digital-Forensics-Guide "$@"
+}
+
+# Function to run dorkbot with provided options
+function dorkbot() {
+    # Replace "dorkbot" with the actual command and options for dorkbot
+    echo "Running dorkbot with options: $@"
+    dorkbot "$@"
+}
+
+# Function to run Dorkify with provided options
+function Dorkify() {
+    # Replace "Dorkify" with the actual command and options for Dorkify
+    echo "Running Dorkify with options: $@"
+    Dorkify "$@"
+}
+
+# Function to run dorks-eye with provided options
+function dorks-eye() {
+    # Replace "dorks-eye" with the actual command and options for dorks-eye
+    echo "Running dorks-eye with options: $@"
+    dorks-eye "$@"
+}
+
+# Function to run EagleEye with provided options
+function EagleEye() {
+    # Replace "EagleEye" with the actual command and options for EagleEye
+    echo "Running EagleEye with options: $@"
+    EagleEye "$@"
+}
+
+
+# Function to run email2phonenumber with provided options
+function email2phonenumber() {
+    # Replace "email2phonenumber" with the actual command and options for email2phonenumber
+    echo "Running email2phonenumber with options: $@"
+    email2phonenumber "$@"
+}
+
+# Function to run FaceForensics with provided options
+function FaceForensics() {
+    # Replace "FaceForensics" with the actual command and options for FaceForensics
+    echo "Running FaceForensics with options: $@"
+    FaceForensics "$@"
+}
+
+# Function to run Fast-Google-Dorks-Scan with provided options
+function Fast-Google-Dorks-Scan() {
+    # Replace "Fast-Google-Dorks-Scan" with the actual command and options for Fast-Google-Dorks-Scan
+    echo "Running Fast-Google-Dorks-Scan with options: $@"
+    Fast-Google-Dorks-Scan "$@"
+}
+
+# Function to run FBI-tools with provided options
+function FBI-tools() {
+    # Replace "FBI-tools" with the actual command and options for FBI-tools
+    echo "Running FBI-tools with options: $@"
+    FBI-tools "$@"
+}
+
+# Function to run finduser with provided options
+function finduser() {
+    # Replace "finduser" with the actual command and options for finduser
+    echo "Running finduser with options: $@"
+    finduser "$@"
+}
+
+# Function to run firmware-mod-kit with provided options
+function firmware-mod-kit() {
+    # Replace "firmware-mod-kit" with the actual command and options for firmware-mod-kit
+    echo "Running firmware-mod-kit with options: $@"
+    firmware-mod-kit "$@"
+}
+
+
+
+
+#bbot                     --option1 value1 --option2 value2
+#bitscout                 --option1 value1 --option2 value2
+#Bloodhound-Osint-Tool    --option1 value1 --option2 value2
+#Chat-GPT-Enhance        --option1 value1 --option2 value2
+#contact-info            --option1 value1 --option2 value2
+#Creds                   --option1 value1 --option2 value2
+#DeepBlueCLI             --option1 value1 --option2 value2
+#DeeperForensics-1.0     --option1 value1 --option2 value2
+#dfvfs                   --option1 value1 --option2 value2
+#DFW1N-OSINT             --option1 value1 --option2 value2
+#Digital-Forensics-Guide --option1 value1 --option2 value2
+#dorkbot                 --option1 value1 --option2 value2
+#Dorkify                 --option1 value1 --option2 value2
+#dorks-eye               --option1 value1 --option2 value2
+#email2phonenumber       --option1 value1 --option2 value2
+#FaceForensics           --option1 value1 --option2 value2
+#Fast-Google-Dorks-Scan --option1 value1 --option2 value2
+#FBI-tools               --option1 value1 --option2 value2
+#finduser                --option1 value1 --option2 value2
+#firmware-mod-kit        --option1 value1 --option2 value2
