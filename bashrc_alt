@@ -37,6 +37,60 @@ fi
 # export PROMPT_COMMAND='RETRN_VAL=$?;logger -p local6.debug "$(whoami) [$$]: $(history 1 | sed "s/^[ ]*[0-9]\+[ ]*//" ) [$RETRN_VAL]"'
 export PROMPT_COMMAND='RETRN_VAL=$?;logger -p local6.debug "$(whoami) [$$]: $(history 1 | sed "s/^[ ]*[0-9]\+[ ]*//" )"'
 
+
+
+
+
+# LOG ALL COMMANDS TO /VARLOG/COMMANDS
+export PROMPT_COMMAND='RETRN_VAL=$?;logger -p local6.debug "$(whoami) [$$]: $(history 1 | sed "s/^[ ]*[0-9]\+[ ]*//" ) [$RETRN_VAL]"'
+
+##########################################################
+
+export PATH=$PATH:/usr/local/bin/omnisint
+export PATH=$PATH:/usr/local/bin/omnisint/standalone
+export PATH=$PATH:/usr/local/bin/omnisint/py
+export PATH=$PATH:/usr/local/bin/omnisint/sh
+export PATH=$PATH:/usr/local/bin/standalone
+export PATH=$PATH:~/.local/bin
+export PATH=$PATH:/var/www/html/scripts
+export PATH=$PATH:/opt
+
+
+#########################################################
+
+alias update='sudo apt update; sudo apt upgrade'
+
+alias arm='sudo chmod +x'
+
+alias url2pdf='wkhtmltopdf'
+
+alias implement='sudo apt install -y'
+alias blowoff='sudo apt autoremove'
+alias dropoff='sudo apt remove'
+
+alias truncatelogs='sudo truncate -s 0 /var/log/syslog'
+
+alias dc1='ssh jeremy@datacenter'
+alias csi='ssh csi@csi'
+alias sshfsdc1='sshfs jeremy@datacenter:/ ~/Pi'
+alias sshfscsi='sshfs csi@csi:/home/csi/ ~/CSI'
+
+alias nmapme='sudo nmap -sS localhost'
+
+alias exclude="'grep -v -wE 'exclude1|exclude2'"
+
+##########################################################
+
+alias displayservices='sudo service --status-all'
+alias search='sudo apt-cache search'
+
+alias bashly='docker run --rm -it --user $(id -u):$(id -g) --volume "$PWD:/app" dannyben/bashly'
+export PATH=$PATH:/new/path1
+export MY_VARIABLE=value
+
+
+
+
 ##########################################################
 
 export PATH=$PATH:/usr/local/bin/omnisint
