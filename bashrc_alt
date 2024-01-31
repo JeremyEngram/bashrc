@@ -1,0 +1,100 @@
+
+# Add an "alert" alias for long running commands.  Use like so:
+#   sleep 10; alert
+alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
+
+# Alias definitions.
+# You may want to put all your additions into a separate file like
+# ~/.bash_aliases, instead of adding them here directly.
+# See /usr/share/doc/bash-doc/examples in the bash-doc package.
+
+if [ -f ~/.bash_aliases ]; then
+    . ~/.bash_aliases
+fi
+
+# bash aliases master file for ssh connectors
+if [ -f ~/.bash_connectors ]; then
+    . ~/.bash_connectors
+fi
+
+# bash functions master file
+if [ -f ~/.bash_functions ]; then
+    . ~/.bash_functions
+fi
+
+# enable programmable completion features (you don't need to enable
+# this, if it's already enabled in /etc/bash.bashrc and /etc/profile
+# sources /etc/bash.bashrc).
+if ! shopt -oq posix; then
+  if [ -f /usr/share/bash-completion/bash_completion ]; then
+    . /usr/share/bash-completion/bash_completion
+  elif [ -f /etc/bash_completion ]; then
+    . /etc/bash_completion
+  fi
+fi
+
+# LOG ALL COMMANDS TO /VARLOG/COMMANDS
+# export PROMPT_COMMAND='RETRN_VAL=$?;logger -p local6.debug "$(whoami) [$$]: $(history 1 | sed "s/^[ ]*[0-9]\+[ ]*//" ) [$RETRN_VAL]"'
+export PROMPT_COMMAND='RETRN_VAL=$?;logger -p local6.debug "$(whoami) [$$]: $(history 1 | sed "s/^[ ]*[0-9]\+[ ]*//" )"'
+
+##########################################################
+
+export PATH=$PATH:/usr/local/bin/omnisint
+export PATH=$PATH:/usr/local/bin/omnisint/standalone
+export PATH=$PATH:/usr/local/bin/omnisint/py
+export PATH=$PATH:/usr/local/bin/omnisint/sh
+export PATH=$PATH:/usr/local/bin/standalone
+export PATH=$PATH:~/.local/bin
+export PATH=$PATH:~/.bin
+export PATH=$PATH:~/bin
+export PATH=$PATH:/var/www/html/scripts
+export PATH=$PATH:/var/www/html
+export PATH=$PATH:/opt
+
+
+#########################################################
+
+alias gkeywordspider='python3 /usr/local/bin/omnisint/googlekeywordspider.py'
+
+
+alias html2pdf='python3 /usr/local/bin/omnisint/html2guipdf'
+
+alias tailjournal='journalctl -xe | ~/journalctl_xelog.log'
+
+alias update='sudo apt update; sudo apt upgrade'
+
+alias arm='sudo chmod +x'
+
+alias url2pdf='wkhtmltopdf'
+
+alias implement='sudo apt install -y'
+alias blowoff='sudo apt autoremove'
+alias dropoff='sudo apt remove'
+
+alias truncatelogs='sudo truncate -s 0 /var/log/syslog'
+
+alias dc1='ssh jeremy@datacenter'
+alias csi='ssh csi@csi'
+alias sshfsdc1='sshfs jeremy@datacenter:/ ~/Pi'
+alias sshfscsi='sshfs csi@csi:/home/csi/ ~/CSI'
+
+alias nmapme='sudo nmap -sS localhost'
+
+alias exclude="'grep -v -wE 'exclude1|exclude2'"
+
+##########################################################
+
+alias displayservices='sudo service --status-all'
+alias search='sudo apt-cache search'
+
+alias bashly='docker run --rm -it --user $(id -u):$(id -g) --volume "$PWD:/app" dannyben/bashly'
+export PATH=$PATH:/new/path1
+export MY_VARIABLE=value
+
+# Fig post block. Keep at the bottom of this file.
+[[ -f "$HOME/.fig/shell/bashrc.post.bash" ]] && builtin source "$HOME/.fig/shell/bashrc.post.bash"
+export DISPLAY=:0.0
+export PATH="$HOME/bin:$PATH"
+
+#source ~/.autoenv/activate.sh
+#source /activate.sh
