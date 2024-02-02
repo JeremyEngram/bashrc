@@ -1,1 +1,45 @@
 # bashrc_functions with ai embedded
+
+
+
+function disk_usage_warning() {
+    local THRESHOLD=90  # Set the disk space utilization threshold in percentage
+
+    local UTILIZATION=$(df -h --output=pcent / | awk 'NR==2 {print substr($1, 1, length($1)-1)}')
+
+    if [ "$UTILIZATION" -ge "$THRESHOLD" ]; then
+        echo "Warning: Disk space utilization is $UTILIZATION%."
+    fi
+
+    unset -f disk_usage_warning  # Unset the function to prevent it from running again
+}
+
+
+function takeowership() {
+  if [ -z "$1" ]; then
+    echo "Please provide a directory path."
+    return 1
+  fi
+
+  if [ ! -d "$1" ]; then
+    echo "The provided path is not a directory."
+    return 1
+  fi
+
+  sudo chown -R csi:csi "$1"
+  sudo chmod 775 "$1"
+}
+
+
+function addtolinestart {
+  if [ $# -ne 2 ]; then
+    echo "Usage: addtolinestart 'line' file"
+    return 1
+  fi
+
+  line="$1"
+  file="$2"
+
+  # Insert line at start of each line
+  sed -i "s/^/$line /" "$file" 
+}
