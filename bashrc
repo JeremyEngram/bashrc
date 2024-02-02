@@ -268,32 +268,12 @@ export GPT4MODELS="/home/csi/.local/share/nomic.ai/GPT4All/"
 
 ################################################
 
-alias mobileforensics='androtree
-'
-alias scriptman='python3 /usr/local/bin/ScriptMan.py'
-alias gpt4all='/home/csi/gpt4all/bin/chat'
-alias webmin='xdg-open https://csi.lan:10000'
-
-
-alias arm='sudo chmod +x'
-alias url2pdf='wkhtmltopdf'
-alias implement='sudo apt install -y'
-alias blowoff='sudo apt autoremove'
-alias dropoff='sudo apt remove'
-alias truncatelogs='sudo truncate -s 0 /var/log/syslog'
-alias nmapme='sudo nmap -sS localhost'
-
 
 export PATH=$PATH:/home/$(whoami)/.local/bin
 export PATH=$PATH:/home/$(whoami)/.bin
 export PATH=$PATH:/home/$(whoami)/bin
-
 export PATH=$PATH:/opt
-export PATH=$PATH:/usr/local/bin/omnisint
-
-
-
-
+export PATH=$PATH:/usr/local/bin/omniscint
 ################################################
 
 export PATH="$PATH:/home/jeremy/.local/bin"
@@ -329,36 +309,42 @@ export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES
 export NVM_DIR="/home/jerermy/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
+
+alias displayservices='sudo service --status-all'
+
+
+export PATH=$PATH:/home/jeremy/.local/bin
+export PATH=$PATH:/home/jeremy/scripts
 export PATH="/home/jerermy/.local/bin:$PATH"
 export PATH=$PATH:/opt/fastchat/bin
-
 
 
 alias gkeywordspider='python3 /usr/local/bin/omnisint/googlekeywordspider.py'
 
 
 alias html2pdf='python3 /usr/local/bin/omnisint/html2guipdf'
-
 alias tailjournal='journalctl -xe | ~/journalctl_xelog.log'
-
 alias update='sudo apt update; sudo apt upgrade'
-
 alias arm='sudo chmod +x'
-
 alias url2pdf='wkhtmltopdf'
-
 alias implement='sudo apt install -y'
 alias blowoff='sudo apt autoremove'
 alias dropoff='sudo apt remove'
-
-
-alias displayservices='sudo service --status-all'
 alias search='sudo apt-cache search'
 
-alias bashly='docker run --rm -it --user $(id -u):$(id -g) --volume "$PWD:/app" dannyben/bashly'
-export PATH=$PATH:/new/path1
-export MY_VARIABLE=value
 
-# Fig post block. Keep at the bottom of this file.
-[[ -f "$HOME/.fig/shell/bashrc.post.bash" ]] && builtin source "$HOME/.fig/shell/bashrc.post.bash"
-export DISPLAY=:0.0
+
+alias mobileforensics='androtree'
+
+alias scriptman='python3 /usr/local/bin/ScriptMan.py'
+alias gpt4all='/home/csi/gpt4all/bin/chat'
+alias webmin='xdg-open https://csi.lan:10000'
+
+
+alias arm='sudo chmod +x'
+alias url2pdf='wkhtmltopdf'
+alias implement='sudo apt install -y'
+alias blowoff='sudo apt autoremove'
+alias dropoff='sudo apt remove'
+alias truncatelogs='sudo truncate -s 0 /var/log/syslog'
+alias nmapme='sudo nmap -sS localhost'
