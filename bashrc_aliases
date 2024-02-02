@@ -1,1 +1,23 @@
 
+################################################
+
+export GITHUB=https://github.com/JeremyEngram
+
+# Define Omniscient HOMEDIR and BASE_DIR
+HOMEDIR="/home/$(whoami)/"
+
+# Define the Base directory
+BASE_DIR="/home/csi/gpt4all"	#All System Files, User Files, Logs Into/Output From Local BaseDir AI
+
+# OFF-PREM MASS STORAGE VARS
+OFF_PREM="/mnt/mass_storage"
+
+# New environment variables
+export WEBIFACE="/var/www/html/omniface"	# Immutable Web Dir Wordpress For Web UI Documentation
+export AIHOME="$BASE_DIR/.local/share/nomic.ai/GPT4All"	# New Home Dir For .Bin LLM Models CodeLlamma WizardUnsensored Groovy-Malformed 
+export AIDIGEST="$BASE_DIR/gpt4all/LocalDocs"	#Spool All System And User Docs To GPT4All
+export OPERATIONS="/opt"
+export CASES="/home/csi/Cases/"	# Read All Cases Into Gpt4All
+export LLMODELS="$BASE_DIR/llmodels/"
+
+export GPT4MODELS="/home/csi/.local/share/nomic.ai/GPT4All/"
