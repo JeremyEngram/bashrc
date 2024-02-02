@@ -1,0 +1,4 @@
+alias dc1='ssh jeremy@dc1'
+alias csi='ssh csi@csi'
+alias sshfsdc1='sshfs jeremy@dc1:/ ~/Raspberry'
+alias sshfscsi='sshfs owner@touchsmart:/home/$(whoami)/tocuhsmart ~/Touchsmart'
