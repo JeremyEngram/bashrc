@@ -1,3 +1,21 @@
+
+host_target() {
+
+read -p "Enter TARGET URL: => " url
+echo "export TARGET=$url" >> ~/.bashrc; source ~/.bashrc;
+# make target log
+echo "export TARGETLOG=/var/log/omniscient/$url.log" >> ~/bashrc  
+echo "SET TARGET IS $TARGET CONFIRMED..."
+echo "IP ADDRESS OF TARGET: " 
+echo "Execute Usage: sudo nmap -sV --script = * $TARGET -oX $TARGETLOG"
+
+ sudo nmap -v -sS -A -T4 -O $TARGET -oN baroninvestigativegroup.nmap
+ sudo nmap -sV --script vuln $TARGET > log.txt
+
+}
+
+
+
 # Function to run Shodan with provided query
 function shodan() {
     if [[ -z "$1" ]]; then
